@@ -44,7 +44,7 @@ public class JeuDuNombreMystère {
                     essai = sc.nextByte();
                     if(essai < 0 && essai > 100)
                     System.out.println("entrée incorrete! veuillez saisir un nombre compris entre 0 et 100");
-                }while(essai < 0 && essai > 100);
+                }while(essai < 0 || essai > 100);
    
                 sc.nextLine(); //vidage de la ligne lue
                     
@@ -57,7 +57,7 @@ public class JeuDuNombreMystère {
                         else       
                             System.out.println("Bien joué! On recommence? (o/n)"); // Rejouer?                                
                                 
-            }while(essai == nombrMystere); //condition de sortie de la boucle = trouver le nombre  
+            }while(essai != nombrMystere); //condition de sortie de la boucle = trouver le nombre  
         
             do{ // contrôle entrée clavier (o/n)
                 reponse = 'o';
